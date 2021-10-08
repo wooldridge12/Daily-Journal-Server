@@ -18,3 +18,14 @@ class JournalEntryView(ViewSet):
         serializer = EntrySerializer(
             entries, many=True, context={'request': request})
         return Response(serializer.data)
+
+
+class EntrySerializer(serializers.ModelSerializer):
+    """  """
+
+    class Meta:
+        """ """
+
+        model = JournalEntry
+        fields = ('id', 'concept', 'entry', 'mood', 'date')
+        depth = 1

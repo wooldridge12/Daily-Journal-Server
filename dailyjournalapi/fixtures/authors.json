@@ -1,0 +1,10 @@
+[
+    {
+        "model": "dailyjournalapi.author",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "author": "Mikey"
+        }
+    }
+]
