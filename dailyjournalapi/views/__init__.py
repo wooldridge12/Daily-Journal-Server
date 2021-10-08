@@ -1,0 +1,1 @@
+from .journalentries import JournalEntryView

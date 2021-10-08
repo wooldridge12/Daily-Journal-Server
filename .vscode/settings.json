@@ -1,0 +1,16 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--django-settings-module=levelup.settings",
+    ],
+    "python.pythonPath": "/Users/michaelwooldridge/.local/share/virtualenvs/daily-journal-server-VskFJXzN/bin/python",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "daily-journal",
+            "database": "db.sqlite3"
+        }
+    ]
+}

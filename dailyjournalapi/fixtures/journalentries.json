@@ -1,0 +1,12 @@
+[
+    {
+        "model": "dailyjournalapi.journalentry",
+        "pk": 1,
+        "fields": {
+        "concept": "Python",
+        "entry": "Working with Django, it seems simple but at times... Jeez its difficult",
+        "mood": 1,
+        "date": "1997-02-10"
+        }
+    }
+]

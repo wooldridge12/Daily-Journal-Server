@@ -1,0 +1,31 @@
+[
+    {
+        "model": "dailyjournalapi.mood",
+        "pk": 1,
+        "fields": {
+        "label": "Happy"
+        }
+    },
+    {
+        "model": "dailyjournalapi.mood",
+        "pk": 2,
+        "fields": {
+        "label": "Ok"
+        }
+    },
+    {
+        "model": "dailyjournalapi.mood",
+        "pk": 3,
+        "fields": {
+        "label": "Frustrated"
+        }
+    },
+    {
+        "model": "dailyjournalapi.mood",
+        "pk": 4,
+        "fields": {
+        "label": "Sad"
+        }
+    }
+
+]
