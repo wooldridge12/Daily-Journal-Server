@@ -18,10 +18,11 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from dailyjournalapi.views import register_user, login_user 
-from dailyjournalapi.views import JournalEntryView
+from dailyjournalapi.views import JournalEntryView, MoodView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'journalentries', JournalEntryView, 'entry')
+router.register(r'moods', MoodView, 'mood')
 
 urlpatterns = [
     path('', include(router.urls)),
