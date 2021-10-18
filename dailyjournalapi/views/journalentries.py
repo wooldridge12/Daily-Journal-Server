@@ -64,20 +64,21 @@ class JournalEntryView(ViewSet):
         except Exception as ex:
             return HttpResponseServerError(ex)
 
-    # def update(self, request, pk=None):
-    #     """   """
+    def update(self, request, pk=None):
+        """   """
 
-    #     mood = Mood.objects.get(pk=request.data["mood"])
+        
 
-    #     entry = JournalEntry.objects.get(pk=pk)
-    #     entry.concept = request.data["concept"]
-    #     entry.entry = request.data["entry"]
-    #     entry.mood = mood
-    #     entry.date = request.data["date"]
+        entry = JournalEntry.objects.get(pk=pk)
+        entry.concept = request.data["concept"]
+        entry.entry = request.data["entry"]
+        entry.date = request.data["date"]
 
-    #     entry.save()
+        mood = Mood.objects.get(pk=request.data["mood"])
+        entry.mood = mood
+        entry.save()
 
-    #     return Response({}, status=status.HTTP_204_NO_CONTENT)
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
 
 
 
