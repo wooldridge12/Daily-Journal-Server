@@ -52,6 +52,34 @@ class JournalEntryView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+    def retrieve(self,request, pk=None):
+        """   """
+
+        try:
+            entry = JournalEntry.objects.get(pk=pk)
+            serializer = EntrySerializer(entry, context={'request': request})
+            return Response(serializer.data)
+        except JournalEntry.DoesNotExist as ex:
+            return Response(ex.args[0], status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return HttpResponseServerError(ex)
+
+    # def update(self, request, pk=None):
+    #     """   """
+
+    #     mood = Mood.objects.get(pk=request.data["mood"])
+
+    #     entry = JournalEntry.objects.get(pk=pk)
+    #     entry.concept = request.data["concept"]
+    #     entry.entry = request.data["entry"]
+    #     entry.mood = mood
+    #     entry.date = request.data["date"]
+
+    #     entry.save()
+
+    #     return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+
 
 
 
